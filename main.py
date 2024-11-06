@@ -1,1 +1,3 @@
-# This is a placeholder file for the project
+from textSummarizer.logging import logger
+
+logger.info("Starting")
