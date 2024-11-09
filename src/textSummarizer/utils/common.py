@@ -1,16 +1,15 @@
-#function using frequently are written in this file
 import os
-import box
 from box.exceptions import BoxValueError
 import yaml
 from textSummarizer.logging import logger
-from box import ConfigBox #it directly gives the value of key value pair in dictionary
 from ensure import ensure_annotations
+from box import ConfigBox
 from pathlib import Path
 from typing import Any
 
-@ensure_annotations #if you pass string in a function it will return something random so to solve the problem
-#we use ensure_annotations then it will give an error that you put string in a integer function
+
+
+@ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """reads yaml file and returns
 
@@ -33,6 +32,8 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
         raise ValueError("yaml file is empty")
     except Exception as e:
         raise e
+    
+
 
 @ensure_annotations
 def create_directories(path_to_directories: list, verbose=True):
@@ -61,3 +62,5 @@ def get_size(path: Path) -> str:
     """
     size_in_kb = round(os.path.getsize(path)/1024)
     return f"~ {size_in_kb} KB"
+
+    
