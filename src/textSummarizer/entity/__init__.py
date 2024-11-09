@@ -1,1 +1,10 @@
-# This is a placeholder file for the project
+#entity is return type of function
+from dataclasses import dataclass
+from pathlib import Path
+
+@dataclass(frozen=True) #decorator 
+class DataIngestionConfig:
+    root_dir: Path
+    source_URL: str
+    local_data_file: Path
+    unzip_dir: Path
