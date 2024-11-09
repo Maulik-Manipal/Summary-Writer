@@ -1,7 +1,7 @@
 artifacts_root: artifacts #it will store artifacts for every new experiment
 
-data ingestion:
+data_ingestion:
   root_dir: artifacts/data_ingestion
-  source_URL: https://github.com/Maulik-Manipal/Test2/raw/refs/heads/main/samsumdata.zip
+  source_URL: https://github.com/entbappy/Branching-tutorial/raw/master/summarizer-data.zip
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
